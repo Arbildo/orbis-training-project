@@ -89,4 +89,42 @@ PARTE 4
 
 
 
+Preguntas-5:
+
+1. ¿Cuál es la diferencia entre una imagen y un contenedor?
+	el contenedor es la instancia de la imagen.
+2. ¿Cómo listo las imágenes que hay en mi computadora?
+	docker images
+3. ¿Cómo salgo de un contenedor de docker?
+	exit
+4. ¿Se elimina el contenedor al salir de ella?
+	No completamente, solo cambia de estado a exited
+5. ¿Cómo elimino un contenedor?
+	docker rm <ID_CONTAINER>
+6. ¿Para qué es necesario el flag `-i`, `-t`, `--rm`?
+	-i : interactive mode
+	-t : run shell on container
+	--rm: elimina el contenedor al salir de este.
+7. ¿Cómo verifico que el archivo creado se encuentra en la imagen?
+	instanciando el contenedor y listando en el directorio
+8. ¿Cómo se comenta una linea de código en Dockerfile?
+	'#' al inicio de una linea
+
+
+
+Preguntas-6:
+1. ¿Qué es NGINX?
+	NGNINX es un servidor web que por defecto escucha el puerto 80
+
+2. ¿Cómo expongo puertos en docker?
+	En el archivo Dockerfile incluir la palabra reservada EXPOSE seguida del nùmero de puerto. Ejemplo : 'EXPOSE: 80 '
+
+3. ¿Cómo especifico los puertos al levantar un contenedor (docker run)?
+	En el comando docker run especificar '-p 80'		
+
+4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
+	En el comando docker run especificar '-p 8080:80'
+
+
+
 

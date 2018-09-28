@@ -1,5 +1,3 @@
-FROM node:10.10.0-slim
+FROM nginx:alpine
 RUN mkdir app
 ADD preguntas.md /app
-WORKDIR /app
-RUN ls

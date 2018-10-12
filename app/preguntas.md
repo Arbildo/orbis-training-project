@@ -154,4 +154,23 @@ Preguntas-6:
 	 -`docker inspect`
 	 		Inspecciona y detalla información de un contenedor o una red
 	 -`docker network`
+
+	 13.
 	 		Comando para crear y gestionar redes de docker
+			13.1. ¿Qué es bash? ¿Qué significa?
+						Bash es un interprete de comandos, (Bourne-again shell)
+			13.2. ¿Cómo ejecuto un archivo bash?
+						Primero otorgar permisos de ejeción (755)
+						Existen dos maneras :
+							- Cuando no se específica interprete en el script
+								sh archivo.sh
+								bash archivo.sh
+								zsh archivo.sh
+							- Cuando se especifica interprete en el script
+								./archivo.sh
+			13.3. ¿Qué pasa si no especifico en un `.sh`, la linea `#!/bin/bash`?
+						No se especifica el interprete por lo tanto cuando se llama al archivo "./example.sh" no encontrará manera de ejecutarlo, sin embargo si antes de ejecutar le das el interprete lo ejecuta : "bash example.sh"
+			13.4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
+						Sí, se pueden utilizar los interpretes que estén instalados en la computadora
+			13.5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
+						

@@ -1,7 +1,13 @@
-version: '2'
+version: '3'
 services:
-  nginx:
+  node:
     container_name: dockerTraining
-    image: irvinstone/orbis-training-docker:1.0.0
+    volumes:
+      - $PWD/app:/app
+    image: arbildo/orbis-training-docker:2.0.0
+    working_dir:
+       /app
     ports:
-      - 1080:80
+      - 3030:1042
+    command:
+       npm start

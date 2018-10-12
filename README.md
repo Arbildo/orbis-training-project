@@ -17,11 +17,17 @@ Parte 6:
 
 PARTE 7
 
-	1. comando Para dar volumen e install node
+	5. comando Para dar volumen e install node
 		docker run -i -v $PWD/app:/app  -w /app arbildo/orbis-training-docker:2.0.0 npm install
 
-	2. comando Para dar volumen, exponer el puerto 3030 e iniciar node
+	5. comando Para dar volumen, exponer el puerto 3030 e iniciar node
 		docker run -i -v $PWD/app:/app  -w /app -p 3030:3030 arbildo/orbis-training-docker:2.0.0 npm start
 	
-	3. comando Para dar volumen, exponer ambos puertos e iniciar node
+	7. comando Para dar volumen, exponer ambos puertos e iniciar node
 		docker run -i -v $PWD/app:/app  -w /app -p 3030:3030 -p 35729:35729 arbildo/orbis-training-docker:2.0.0 npm start
+
+Nuevo puerto asignado en servidor : 1042
+	9. Comando para ejecutar release en servidor
+		docker run -i -v $PWD/app:/app  -w /app  arbildo/orbis-training-docker:2.0.0 npm run release
+	10. Comando para ejecutar release en servidor
+		docker run -i -v $PWD/app:/app  -w /app  arbildo/orbis-training-docker:2.0.0 npm run release

@@ -11,3 +11,10 @@ services:
       - 3030:1042
     command:
        npm start
+  test:
+    container_name: Test
+    image: arbildo/orbis-training-docker:2.0.0
+    links:
+      - "node"
+    command:
+       curl node:1042

@@ -17,7 +17,7 @@ PARTE 1
 5. ¿Qué es markdown? ¿Para qué sirve?
 	Es un lenguaje de etiqueado, sirve para escribir notaciones y/o documentación.
 6. ¿Cómo inicializo y configuro un proyecto de git?
-	Se inicializa con el comando "git init .". Se configura mediante los comandos "git config", "git remote config" 
+	Se inicializa con el comando "git init .". Se configura mediante los comandos "git config", "git remote config"
 
 PARTE 2
 1. ¿Para qué ayuda el `git stash`?
@@ -30,7 +30,7 @@ PARTE 2
 4. ¿Cual es la diferencia entre la shell y la terminal?
 	Shell		-> 	Interprete de comandos del core de un sistema operativo tipo linux / unix
 	Terminal	->	Punto de acceso a un sistema
-	
+
 5. ¿Que hace estos comandos? `git clone`, `git status`, `git add`, `git commit`, `git push`, `git checkout`, `git stash`, `git rebase`, `git merge`, `git branch`, `git push`?
  `git clone`	->	Clona un repositorio
  `git status`	->	Muestra el estado de los archivos en el working directory
@@ -68,7 +68,7 @@ PARTE 4
 	Sí, todas las imágenes necesitan una imágen base para generarse, la imágen base es "scratch"
 
 8. ¿Porqué debo anteponer el nombre de usuario en una imagen docker nueva?
-	Por que es un estàndar de dockerhub para identificar a qué usuario de docker pertenece	
+	Por que es un estàndar de dockerhub para identificar a qué usuario de docker pertenece
 
 9. ¿Que pasa si creo una imagen sin especificar una versión o tag, con qué versión se crea?
 	Se crea con la versión latest
@@ -125,6 +125,33 @@ Preguntas-6:
 4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
 	En el comando docker run especificar '-p 8080:80'
 
-
-
-
+12.
+	12.1. ¿Es necesario especificar el `workdir` en docker?, ¿Porqué?
+				- Sí, de lo contrario muestra error especificando que necesita un $PATH
+	12.2. ¿Que hacen los siguientes comandos?
+	 -`docker ps`
+	 		Lista los contenedor en ejecución
+	 -`docker pull`
+	 		Trae la imágen o actualiza los cambios locales en la imágen, desde l hub de docker o de un repositorio local
+	 -`docker push`
+	 		Actualiza los cambios de la imágen en el registry de docker (dockerhub)o en un registry local
+	 -`docker rm`
+	 		Elimina un contenedor
+	 -`docker rmi`
+	 		Elimina una imágen
+	 -`docker run`
+	 		Crea un contenedor a partir de una imágen (dockerhub) o docker file
+	 -`docker tag`
+	 		Etiqueta una versión para la imágen
+	 -`docker search`
+	 		Busca una imágen en un registry de docker o en un registry local
+	 -`docker login`
+	 		Comando interactivo para ingresar credenciales de nuestro usuario de docker hub
+	 -`docker exec`
+	 		Ejecuta una comando en un contenedor en ejecución
+	 -`docker build`
+	 		Construye una imágen en base al dockerfile
+	 -`docker inspect`
+	 		Inspecciona y detalla información de un contenedor o una red
+	 -`docker network`
+	 		Comando para crear y gestionar redes de docker

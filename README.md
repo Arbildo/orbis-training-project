@@ -1,4 +1,4 @@
- Parte 4:
+ ## Parte 4:
  	4. commando:
  		docker build -t irvinstone/orbis-training-docker:0.1.0 .
 
@@ -10,21 +10,21 @@
 		docker tag irvinstone/orbis-training-docker:0.1.0 irvinstone/orbis-training-docker:0.2.0
 		docker push irvinstone/orbis-training-docker
 
-Parte 6:
+##  Parte 6:
 	2. commando:
 		docker run -d -p "1080:80" irvinstone/orbis-training-docker:1.0.0
 
 	6. commando:
 		docker-compose up -d
 
-PARTE 7:
+## PARTE 7:
 
 	5. comando Para dar volumen e install node
 		docker run -i -v $PWD/app:/app  -w /app arbildo/orbis-training-docker:2.0.0 npm install
 
 	5. comando Para dar volumen, exponer el puerto 3030 e iniciar node
 		docker run -i -v $PWD/app:/app  -w /app -p 3030:3030 arbildo/orbis-training-docker:2.0.0 npm start
-	
+
 	7. comando Para dar volumen, exponer ambos puertos e iniciar node
 		docker run -i -v $PWD/app:/app  -w /app -p 3030:3030 -p 35729:35729 arbildo/orbis-training-docker:2.0.0 npm start
 

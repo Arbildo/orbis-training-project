@@ -1,0 +1,19 @@
+pipeline {
+stages {
+        stage('Build stage') {
+            steps {
+                sh 'mvn -B clean verify'
+            }
+        }
+        stage('Test stage') {
+            steps {
+                sh 'mvn -B clean verify'
+            }
+        }
+        stage('Deploy stage') {
+            steps {
+                sh 'mvn -B clean verify'
+            }
+        }
+
+}

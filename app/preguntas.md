@@ -173,4 +173,70 @@ Preguntas-6:
 			13.4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
 						Sí, se pueden utilizar los interpretes que estén instalados en la computadora
 			13.5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
-						
+
+# TALLER JENKINS
+
+## PARTE 1
+
+			- ¿Qué significa el comando -d?
+			  Verifica la existencia de un directorio
+			- ¿Porqué la sentencia comienza con @?
+			  Para ocultar la salida de la ejecución del proceso y solo mostrar el resultado
+			- ¿Para qué sirve el comando mkdir?
+			  Crear directorio
+			- Explicar lo que hace la función mkdir_deploy_dir
+			  Verifica la existencia del directorio deploy/build, si no existe lo crea
+
+
+			- ¿Para qué sirve el uso de \?
+				Para hacer de línea sin afectar la correlatividad del comando
+			- ¿Para qué sirve el uso de &&?
+				Concadena comandos y ejecuta
+			- ¿Qué función cumple Explicar lo que hace la función create_branch_gh_pagesusar los argumentos -rf?
+				r : Recursivo
+				f : Forzado
+			- Explicar lo que hace la función git_init (linea por linea)
+				Se dirige al directorio "deploy/gh-pages"
+				Elimina .git de manera recursiva y formzada si existe el directorio y vuelve a iniciar el repositorio
+
+
+			- ¿Para qué sirve el uso de eval?
+				Sirve para declarar variables que solo se utilizarán dento de la función.
+			- ¿Para qué sirve el uso de shell?
+				Utiliza recursos que existen fuera del makefile.
+			- ¿Para qué sirve el uso de git log --pretty=format:"%an"?
+				Muestra los nombre de el historia de logs del repositorio mediante el uso de "%an"
+			- ¿Cuál es la diferencia en usar git config y git config --global?
+				Git config --global envía la configuración a ""~/.gitconfig"  que se utiliza de manera global mientras git config a .git/config solo a la configuración del repositorio
+			- Explicar lo que hace la función git_config (línea por línea)
+				Inicializa las variables mediante EVAL y el uso de shell para capturar los nombres de usuario y correos del log de commits del reposotorio, se mueve al directorio nuevo y configura el usuario y el correo con los antes capturados
+
+
+			-	¿Para qué sirve el uso de awk?
+				Se utiliza para procesar texto
+			-	¿Para qué sirve el uso de sed?
+				Para reemplazar texto
+			-	¿Para qué sirve el uso de git log --pretty=format:"%an"?
+				Muestra los nombre de el historia de logs del repositorio mediante el uso de "%an"
+			-	Explicar lo que hace la función git_add_remote_repository
+				Captura el nombre del repositorio origin, luego imprime ese nombre y en esa salida reemplaza el protocolo por la variable global GIT_PERSONAL_TOKEN para luego dirigirse al nuevo directorio y agregar un origin remoto
+
+
+			- Explicar lo que hace la función create_branch_gh_pages
+				Se dirige al directorio  deploy/gh-pages y crea una rama a partir de la rama master
+
+
+			- Explicar lo que hace la función copy_files_to_deploy
+				Copia todos los archivos de la carpeta deploy/build a la carpeta deploy/gh-pages
+
+			- Explicar lo que hace la función git_add
+				Se dirige a la carpeta deploy/gh-pages, para agregar seguimiento a todos los archivos del repositorio y luego ejecuta git status
+
+
+			- Explicar lo que hace la función create_commit (línea por línea)			
+
+
+			- Explicar lo que hace la función git_push (línea por línea)
+
+
+			- Explicar lo que hace la función clean_workspace

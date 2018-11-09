@@ -27,9 +27,13 @@ parameters {
         }
         stage('Deploy') {
             steps {
-                sh 'make release'
-                sh 'make deploy.ghpages'
+	if ("${DEPLOY}" == "aws") {
+	sh 'make deploy.aws'
+	} else {
+           sh 'make deploy.ghpages'
+	}
             }
+
         }
     }
 }

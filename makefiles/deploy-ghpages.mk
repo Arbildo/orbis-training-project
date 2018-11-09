@@ -1,6 +1,6 @@
 .PHONY: deploy.ghpages
 
-DEPLOY_DIR = /app/deploy
+DEPLOY_DIR = /app/app/deploy
 BUILD_DIR = build
 GIT_BRANCH = gh-pages
 GIT_PERSONAL_TOKEN =  e9a8061fb5dff669a137f909bc74cadeaa062b60

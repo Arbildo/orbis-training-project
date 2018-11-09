@@ -24,6 +24,6 @@ resources:
 
 project_workspace:
 	docker create --rm --volumes-from workspace  -w /app $(DOCKER_IMAGE)
-
+	docker cp ./ workspace:/app
 
 .PHONY: resources

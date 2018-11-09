@@ -10,8 +10,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'make project_workspace'
                 sh 'make install'
+                sh 'make project_workspace'
             }
         }
         stage('Test') {

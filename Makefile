@@ -23,7 +23,7 @@ resources:
 
 
 project_workspace:
-	docker create --rm --volumes-from workspace  -w /app $(DOCKER_IMAGE)
-	docker cp ./ workspace:/app
+	docker rm -f workspace
+	docker create -v /app/ --name workspace alpine
+	docker cp ./ workspace:/app/
 
-.PHONY: resources

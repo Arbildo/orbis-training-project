@@ -9,7 +9,7 @@ DOCKER_VOLUME = ${PWD}/app:/app
 USER = $(whoami)
 
 install:
-	docker run --volumes-from workspace -w /app $(DOCKER_IMAGE) npm install
+	docker run --volumes-from workspace -w /app/app $(DOCKER_IMAGE) npm install
 start:
 	docker run -d --volumes-from workspace -w /app -p 3030:1042 -p 35729:35729 $(DOCKER_IMAGE) npm start
 release:

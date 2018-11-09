@@ -23,7 +23,7 @@ resources:
 
 
 project_workspace:
-	docker run --rm --volumes-from workspace  -w /app $(DOCKER_IMAGE) npm start
+	docker run --rm --volumes-from workspace  -v $(PWD):/app $(DOCKER_IMAGE) npm start
 
 
 .PHONY: resources

@@ -13,7 +13,7 @@ install:
 start:
 	docker run -d --volumes-from workspace -w /app/app -p 3030:1042 -p 35729:35729 $(DOCKER_IMAGE) npm start
 release:
-	docker run --workdir=/app -v ${DOCKER_VOLUME} ${DOCKER_IMAGE} npm run release
+	docker run --volumes-from workspace -w /app/app -v ${DOCKER_VOLUME} ${DOCKER_IMAGE} npm run release
 greet:
 	@docker run -v ${PWD}/resources:/resources -e NAME="${NAME}" node:10.10.0-slim bash /resources/example.sh
 	@bash ./resources/example.sh

@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 
 pipeline {
-parameters {
     agent any
     stages {
         stage('Checkout') {
@@ -23,9 +22,7 @@ parameters {
         stage('Deploy') {
             steps {
 	sh 'make deploy.aws'
-
         }
     }
-}
 }
 }
